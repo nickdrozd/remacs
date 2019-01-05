@@ -662,7 +662,7 @@ pub fn set_window_parameter(
     if old_alist_elt.is_nil() {
         win.window_parameters = ((parameter, value), win.window_parameters).into();
     } else {
-        setcdr(old_alist_elt.as_cons_or_error(), value);
+        setcdr(old_alist_elt.into(), value);
     }
     value
 }
